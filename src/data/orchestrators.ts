@@ -391,6 +391,14 @@ const hyperScreenshots = [
   screenshot("hyper", "Hyper", "Hyper website", "https://www.hyperfx.ai/")
 ];
 
+const helmorScreenshots = [
+  screenshot("helmor", "Helmor", "Helmor website", "https://helmor.ai/")
+];
+
+const openSwarmScreenshots = [
+  screenshot("openswarm", "Open Swarm", "Open Swarm website", "https://openswarm.com/")
+];
+
 const crewletScreenshots = [
   screenshot("crewlet", "Crewlet", "Crewlet website", "https://www.crewlet.io/")
 ];
@@ -645,6 +653,105 @@ export const orchestrators: OrchestratorEntry[] = [
           href: "https://docs.agentanalytics.sh/guides/autoresearch-growth-skill/"
         }
       ]
+    )
+  },
+  {
+    slug: "helmor",
+    rank: 27,
+    title: "Helmor",
+    githubRepo: "dohooo/helmor",
+    accent: "amber",
+    mark: {
+      kind: "image",
+      src: "/logos/helmor.png",
+      label: "Helmor logo",
+      surface: "dark"
+    },
+    summary:
+      "An Apache-2.0 local-first IDE and workbench for orchestrating Claude Code, Codex, and other coding agents across worktrees.",
+    note:
+      "Centers orchestration on planning, running, reviewing, testing, merging, and shipping multi-agent software work locally instead of handing the source tree to a hosted vendor.",
+    overview: [
+      "Helmor is an open-source local workbench for multi-agent software development. Its website frames the product as a local-first IDE for coding-agent orchestration, with Claude Code and Codex running side by side across worktrees.",
+      "It belongs in Open Orchestrators because it focuses on the operator loop around coding agents: plan the work, run agents locally, review/test the result, merge, and ship software rather than only generating code in one chat session."
+    ],
+    bestFor: ["Local coding-agent orchestration", "Claude Code and Codex side by side", "Worktree-based review and shipping"],
+    tags: ["coding agents", "local-first IDE", "worktrees", "open source"],
+    links: [
+      {
+        label: "Website",
+        href: "https://helmor.ai/",
+        emphasis: "primary"
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/dohooo/helmor"
+      },
+      {
+        label: "Releases",
+        href: "https://github.com/dohooo/helmor/releases"
+      }
+    ],
+    screenshots: helmorScreenshots,
+    agentAnalytics: agentAnalyticsSection(
+      "helmor",
+      "Helmor",
+      "Helmor helps builders run and ship local coding-agent work. Agent Analytics gives the follow-up agent visitor, source, funnel, and conversion data after those changes reach users.",
+      ["a builder uses Helmor to plan, run, review, test, merge, and ship a coding-agent change", "the changed website, docs, app, onboarding path, demo, or support surface reports visits, sources, CTA clicks, signup, activation, retention, funnels, and experiment events to Agent Analytics", "a follow-up agent fetches the Agent Analytics results and compares the shipped path with the prior period", "the builder decides which Helmor-managed workstream to improve next from user behavior, not only local task status"],
+      "Install Agent Analytics on the user-facing surface Helmor helps ship. The useful measurement loop starts after the agent-built change lands and users interact with it.",
+      "Helmor-built page, traffic source, CTA click, signup, activation event, funnel step, experiment, or shipped worktree",
+      helmorScreenshots
+    )
+  },
+  {
+    slug: "openswarm",
+    rank: 28,
+    title: "Open Swarm",
+    githubRepo: "openswarm-ai/openswarm",
+    accent: "orange",
+    mark: {
+      kind: "image",
+      src: "/logos/openswarm.png",
+      label: "Open Swarm logo"
+    },
+    summary:
+      "An MIT-licensed local mission-control center for launching, monitoring, and coordinating multiple AI agents in parallel.",
+    note:
+      "Centers orchestration on a visual canvas dashboard, parallel agent sessions, unified human-in-the-loop approvals, reusable prompt/templates, tools, skills, views, git worktree isolation, diff review, and local control.",
+    overview: [
+      "Open Swarm is a locally running orchestrator for managing multiple agents in parallel. Its public README describes a mission-control interface for launching, monitoring, and coordinating swarms of coding agents from one screen.",
+      "It belongs in Open Orchestrators because it makes the swarm itself the operating surface: visual dashboards, agent cards, approval queues, prompt templates, skills, MCP tools, views, git worktree isolation, diffs, and local session history."
+    ],
+    bestFor: ["Local agent swarms", "Human-in-the-loop approvals", "Visual multi-agent dashboards"],
+    tags: ["agent swarm", "local orchestrator", "approvals", "worktrees"],
+    links: [
+      {
+        label: "Website",
+        href: "https://openswarm.com/",
+        emphasis: "primary"
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/openswarm-ai/openswarm"
+      },
+      {
+        label: "Docs",
+        href: "https://docs.openswarm.com"
+      },
+      {
+        label: "Releases",
+        href: "https://github.com/openswarm-ai/openswarm/releases"
+      }
+    ],
+    screenshots: openSwarmScreenshots,
+    agentAnalytics: agentAnalyticsSection(
+      "openswarm",
+      "Open Swarm",
+      "Open Swarm coordinates parallel local agents. Agent Analytics gives those agents user-facing outcome data after a swarm-built change ships.",
+      ["an operator uses Open Swarm to launch, monitor, approve, and coordinate several agent sessions", "one or more swarm-built changes ship to a website, docs site, app, onboarding flow, demo, or support surface", "the changed surface reports visits, sources, CTA clicks, signup, activation, retention, funnels, and experiment events to Agent Analytics", "a later Open Swarm agent fetches the outcome data and turns it into the next task, prompt template, or review decision"],
+      "Install Agent Analytics on the project surfaces Open Swarm agents change. Agent Analytics measures user behavior after deployment; it is not a replacement for Open Swarm's local session, cost, approval, or diff tracking.",
+      "Open Swarm-built page, traffic source, CTA click, signup, activation event, funnel step, experiment, or approved agent task",
+      openSwarmScreenshots
     )
   },
   {
