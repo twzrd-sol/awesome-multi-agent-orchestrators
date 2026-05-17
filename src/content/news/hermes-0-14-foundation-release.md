@@ -12,14 +12,19 @@ tags:
   - gateway
   - local-agents
   - open-source
+ogImage: "/images/news/hermes-0-14-foundation-release.png"
 draft: false
 ---
 
 Nous Research released Hermes Agent `v0.14.0` on May 16 as "The Foundation Release." The release notes frame it as a broad infrastructure pass: Hermes installs more easily, starts faster, exposes more provider and gateway surfaces, and becomes easier to plug into other agent tools.
 
+![Hermes v0.14.0 Foundation Release editorial artwork with dark green archival grid, terminal panels, and messenger-feather infrastructure motif](/images/news/hermes-0-14-foundation-release.png)
+
 The biggest category signal is distribution. Hermes is now available as a PyPI package, so the install path can be as simple as `pip install hermes-agent && hermes`. The release also lazy-installs heavyweight backends on first use, trims the `[all]` extras, adds tiered install fallback when a wheel rejects on a platform, and includes a supply-chain advisory checker. For Open Orchestrators readers, that matters because an agent runtime becomes much more interesting when the install path stops being the hard part.
 
 The second signal is interoperability. `hermes proxy` now exposes an OpenAI-compatible local endpoint backed by OAuth-authenticated providers such as Claude Pro, ChatGPT Pro, and SuperGrok. That lets tools like Codex CLI, Aider, Cline, Continue, and custom scripts point at Hermes as the provider bridge instead of each integration owning its own auth path. Hermes also adds SuperGrok OAuth with Grok 4.3 at a 1M-token context window, a Codex app-server runtime path for OpenAI/Codex models, NovitaAI, and an OpenRouter Pareto Code router knob.
+
+![Hermes provider proxy editorial artwork showing a central agent hub connected to abstract provider and messaging nodes in the Hermes dark green and ivory brand system](/images/news/hermes-0-14-provider-proxy.png)
 
 The operating surface widened too. The release adds first-class `x_search`, Microsoft Teams end-to-end support, LINE, SimpleX Chat, Discord channel history backfill, native `clarify` buttons on Telegram and Discord, and a more resilient gateway that keeps running when platforms fail. Hermes now reaches 22 messaging platforms, which keeps pushing it toward a persistent agent layer that can live where teams already coordinate.
 
