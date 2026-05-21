@@ -412,6 +412,10 @@ const openSwarmScreenshots = [
   screenshot("openswarm", "Open Swarm", "Open Swarm website", "https://openswarm.com/")
 ];
 
+const openHumanScreenshots = [
+  screenshot("openhuman", "OpenHuman", "OpenHuman website", "https://tinyhumans.ai/openhuman")
+];
+
 const crewletScreenshots = [
   screenshot("crewlet", "Crewlet", "Crewlet website", "https://www.crewlet.io/")
 ];
@@ -718,6 +722,59 @@ export const orchestrators: OrchestratorEntry[] = [
       "Install Agent Analytics on the user-facing surface Helmor helps ship. The useful measurement loop starts after the agent-built change lands and users interact with it.",
       "Helmor-built page, traffic source, CTA click, signup, activation event, funnel step, experiment, or shipped worktree",
       helmorScreenshots
+    )
+  },
+
+  {
+    slug: "openhuman",
+    rank: 29,
+    title: "OpenHuman",
+    githubRepo: "tinyhumansai/openhuman",
+    accent: "emerald",
+    mark: {
+      kind: "monogram",
+      value: "OH",
+      label: "OpenHuman monogram"
+    },
+    summary:
+      "A GPL-3.0 personal AI agent harness with a desktop-first UI, local memory tree, Obsidian-style wiki, integrations, model routing, voice, and optional local AI.",
+    note:
+      "Centers orchestration on a personal agent that can connect to everyday tools, auto-fetch context, compress it into local memory, expose typed tools, and operate through a simple desktop experience rather than a config-first terminal workflow.",
+    overview: [
+      "OpenHuman is an open-source personal AI agent harness from TinyHumans. The public README describes a desktop-first assistant with a mascot UI, local SQLite-backed memory tree, Obsidian-compatible wiki, one-click OAuth integrations, native tools, model routing, voice, and optional Ollama-backed local AI.",
+      "It belongs in Open Orchestrators because its operating surface is not only chat. OpenHuman connects to user tools, pulls fresh data into memory on a recurring loop, exposes integrations as typed tools, and gives the agent durable personal context for daily workflows.",
+      "The repository is GPL-3.0, Rust-primary, and in early beta. Its public repo and website frame the product around private, simple, human-facing personal agent orchestration."
+    ],
+    bestFor: ["Personal AI agent harness", "Local memory and Obsidian-style wiki", "Daily-life integrations and voice"],
+    tags: ["personal agent", "memory", "desktop", "integrations", "open source"],
+    links: [
+      {
+        label: "Website",
+        href: "https://tinyhumans.ai/openhuman",
+        emphasis: "primary"
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/tinyhumansai/openhuman"
+      },
+      {
+        label: "Docs",
+        href: "https://tinyhumans.gitbook.io/openhuman/"
+      },
+      {
+        label: "Official X",
+        href: "https://x.com/tinyhumansai"
+      }
+    ],
+    screenshots: openHumanScreenshots,
+    agentAnalytics: agentAnalyticsSection(
+      "openhuman",
+      "OpenHuman",
+      "OpenHuman gives users a personal agent with memory, integrations, and daily workflow context. Agent Analytics measures the public project surfaces, onboarding paths, docs, and product flows those agents help change.",
+      ["a builder uses OpenHuman to research, plan, write, update docs, improve onboarding, or ship a product surface", "the affected website, docs path, app path, or onboarding flow reports visits, sources, CTA clicks, signup, activation, retention, and task-completion events to Agent Analytics", "OpenHuman or a follow-up agent reads the Agent Analytics results after the change reaches users", "the next personal-agent task is chosen from user-facing outcomes, not only remembered context"],
+      "Instrument the product or web surface OpenHuman helps change. Agent Analytics reads user-facing event data; it is not a replacement for OpenHuman's personal memory, local wiki, integration sync, or voice workflow.",
+      "OpenHuman-assisted page, docs path, traffic source, CTA click, signup, activation event, retention signal, or task-completion event",
+      openHumanScreenshots
     )
   },
   {
